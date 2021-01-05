@@ -61,7 +61,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
     private CallbackManager callbackManager;
     private FirebaseAuth firebaseAuth;
 
-    @BindView(R.id.login_button)
+//    @BindView(R.id.login_button)
     LoginButton loginButton;
 
     EditText editText;
@@ -81,7 +81,7 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_phone_auth);
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 //        ButterKnife.bind(this);
-        mLoginButton = findViewById(R.id.login_button);
+//        mLoginButton = findViewById(R.id.login_button);
         callbackManager = CallbackManager.Factory.create();
 //        facebookButton = findViewById(R.id.fb);
 //        List<String> permissionNeeds = Arrays.asList("user_photos");
@@ -97,26 +97,26 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
 //        });
 
 
-        mLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Log.d(TAG, "facebook:onSuccess:" + loginResult);
-                handleFacebookAccessToken(loginResult.getAccessToken());
-//                setFacebookProfileData(loginResult);
-                startActivity(new Intent(PhoneAuthActivity.this, MainActivity.class));
-                finish();
-            }
-
-            @Override
-            public void onCancel() {
-
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Toast.makeText(PhoneAuthActivity.this, error.getLocalizedMessage().toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        mLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                Log.d(TAG, "facebook:onSuccess:" + loginResult);
+//                handleFacebookAccessToken(loginResult.getAccessToken());
+////                setFacebookProfileData(loginResult);
+//                startActivity(new Intent(PhoneAuthActivity.this, MainActivity.class));
+//                finish();
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//
+//            }
+//
+//            @Override
+//            public void onError(FacebookException error) {
+//                Toast.makeText(PhoneAuthActivity.this, error.getLocalizedMessage().toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
         PhoneLoginButton = findViewById(R.id.buttonGetOtp);
@@ -137,13 +137,13 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-        PhoneLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent phoneintent = new Intent(PhoneAuthActivity.this, VerifyPhoneActivity.class);
-                startActivity(phoneintent);
-            }
-        });
+//        PhoneLoginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent phoneintent = new Intent(PhoneAuthActivity.this, VerifyPhoneActivity.class);
+//                startActivity(phoneintent);
+//            }
+//        });
 
     }
 
@@ -288,25 +288,25 @@ public class PhoneAuthActivity extends AppCompatActivity implements View.OnClick
                         }
                     }
                 });
-        findViewById(R.id.buttonGetOtp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String number = editText.getText().toString().trim();
-
-                if (number.isEmpty() || number.length() < 10) {
-                    editText.setError("Valid number is required");
-                    editText.requestFocus();
-                    return;
-                }
-
-                String phoneNumber = "+" + number;
-
-                Intent intent = new Intent(PhoneAuthActivity.this, VerifyPhoneActivity.class);
-                intent.putExtra("phonenumber", phoneNumber);
-                startActivity(intent);
-            }
-        });
+//        findViewById(R.id.buttonGetOtp).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                String number = editText.getText().toString().trim();
+//
+//                if (number.isEmpty() || number.length() < 10) {
+//                    editText.setError("Valid number is required");
+//                    editText.requestFocus();
+//                    return;
+//                }
+//
+//                String phoneNumber = "+" + number;
+//
+//                Intent intent = new Intent(PhoneAuthActivity.this, VerifyPhoneActivity.class);
+//                intent.putExtra("phonenumber", phoneNumber);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 

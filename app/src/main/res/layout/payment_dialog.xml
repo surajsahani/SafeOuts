@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="366dp"
+    android:layout_height="384dp"
+    android:layout_marginBottom="39dp"
+    android:layout_centerInParent="true">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/qs"
+        android:textSize="24dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#159A8E"
+        android:text="What is Contact Tracing "
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ans1"
+        android:layout_below="@id/qs"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_margin="20dp"
+        android:text="If any of the employee at the outlets part of SAFE OUTS is tested positive with COVID -19 a notification would be sent to your phone “An employee at outlet part of SAFE OUTS has been tested positive for COVID 19” "
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ans2"
+        android:layout_below="@id/ans1"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="The information is at the discretion of the outlet to share and not all outlets part of SAFE OUTS has opted to disclose positive COVID 19 cases."
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/know_more"
+        android:layout_below="@id/ans2"
+        android:layout_marginTop="10dp"
+        android:onClick="Knowmore"
+        android:textAlignment="center"
+        android:text="Know More"
+        android:textSize="20dp"
+        android:textColor="#159A8E"
+        tools:ignore="OnClick" />
+</RelativeLayout>

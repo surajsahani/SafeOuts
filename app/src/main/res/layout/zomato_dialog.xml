@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="266dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_centerInParent="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ans1"
+            android:padding="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_margin="20dp"
+            android:text="
+At present SAFEOUTS is not partnering with this outlet, we will direct you to zomato search option "
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/zomato_know_more"
+            android:layout_below="@id/ans1"
+            android:textAlignment="center"
+            android:text="Proceed"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#159A8E"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

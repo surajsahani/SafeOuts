@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/select_product_img"
+            android:layout_width="300dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="200dp"/>
+        <EditText
+            android:id="@+id/select_product_name"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint="PName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/select_product_img"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/select_product_desc"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint="Restaurant tagline "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/select_product_name"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/select_product_price"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Address "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/select_product_desc"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_no_ofPeople"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" No of people present "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/select_product_price"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_no_ofPeople_sit_now"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" No of total  people sit now  "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_no_ofPeople"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_people_used_to_sit"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" No of people used to sit "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_no_ofPeople_sit_now"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_total_seats"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Total Seats "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_people_used_to_sit"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_contact"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Contact Number "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_total_seats"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_contact_tracing"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Contact tracing available? "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_contact"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_emp1_name"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 1 name "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_contact_tracing"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp1_design"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 1 designation "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp1_name"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp1_number"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 1 Number "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp1_design"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp2_nam"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee2 Name "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp1_number"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp2_designation"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 2 designation "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp2_nam"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp2_number"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 2 Number "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp2_designation"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_emp3_name"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 3 Name "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp2_number"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_emp3_desination"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 3 designation "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp3_name"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp3_number"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 2 Number "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp3_desination"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp4_name"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 4 Name "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp3_number"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp4_designation"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 4 Designation "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp4_name"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp4_number"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 4 Number "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp4_designation"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_emp5_name"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 5 Name "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp4_number"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp5_designation"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 5 Designation "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp5_name"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_emp5_number"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Employee 5 Number "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp5_designation"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_emp_no_wearing_mask"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" No of Employees wearing mask "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp5_number"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/upload_sanitization_freq"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Sanitization freq "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_emp_no_wearing_mask"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_distance"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Distance "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_sanitization_freq"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/upload_distance_NopLive_edt"
+            android:layout_width="match_parent"
+            android:inputType="textImeMultiLine"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:hint=" Distance_NOPLive: "
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/upload_distance"
+            android:textColor="#000"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/add_new_product_btn"
+            android:layout_width="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"
+            android:text="Add Product"
+            android:padding="15dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_distance_NopLive_edt" />
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"
+            android:text="Home"
+            android:padding="15dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_new_product_btn"
+            />
+    </RelativeLayout>
+</ScrollView>

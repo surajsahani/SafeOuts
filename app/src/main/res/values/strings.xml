@@ -1,3 +1,66 @@
 <resources>
     <string name="app_name">SafeOuts</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_settings">Verification</string>
+    <string name="facebook_app_id">1628004524169901</string>
+    <string name="fb_login_protocol_scheme">fb1270642323288179</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="home">Home</string>
+    <string name="filter">Filter</string>
+
+    <string name="btn_ok">Ok</string>
+
+    <string name="btn_no_thanks">No, thank you</string>
+
+    <string name="invalid_custom_token">Erro inesperado, entre em contato ou tente novamente.</string>
+    <string name="token_mismatch">Erro inesperado, entre em contato ou tente novamente.</string>
+    <string name="invalid_credential">Credenciais Expiradas ou mal formatadas, tente novamente.</string>
+    <string name="invalid_email">Email incorreto, tente novamente.</string>
+    <string name="wrong_password">Senha inválida ou o usuário não possui uma senha.</string>
+    <string name="user_mismatch">Credenciais incorretas, tente novamente.</string>
+    <string name="requires_recent_login">Operação inválida, por favor faça login novamente.</string>
+    <string name="account_exists_diff_credential">Conta já existente utilizando outra forma de se Credenciar, tente novamente da forma correta.</string>
+    <string name="email_already_in_use">Email já em uso.</string>
+    <string name="credential_already_in_use">Credenciais já existente, tente novamente de outra forma.</string>
+    <string name="user_disable">Usuário desativado. Entre em contato.</string>
+    <string name="user_token_expired">Credenciais inválidas, faça login novamente.</string>
+    <string name="user_not_found">Usuário não encontrado, tente novamente ou se cadastre.</string>
+    <string name="invalid_user_token">Credenciais inválidas, tente novamente ou se cadastre</string>
+    <string name="operation_not_allowed">Erro inesperado, entre em contato ou tente novamente.</string>
+    <string name="weak_password">Senha muito fraca (Pelo menos 6 carácteres).</string>
+
+    <string name="erro_unexpected">Unexpected Error</string>
+
+
+    <string name="login_facebook_cancelled">Facebook login cancelled</string>
+    <string name="login_facebook_error">Error in facebook login</string>
+    <string name="permission_error_title">Important</string>
+
+    <string name="todo">TODO</string>
+    <string name="welcome_to_safe_outs">Welcome to Safe Outs</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_mobile_number">Enter Mobile number</string>
+    <string name="facebook_application_id" translatable="false">1270642323288179</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="zomato">Zomato</string>
+    <string name="swiggy">Swiggy</string>
+
+    <!--    <string name="navigation_drawer_open">Open navigation drawer</string>-->
+    <!--    <string name="navigation_drawer_close">Close navigation drawer</string>-->
+    <string name="RateApp">Rate our app</string>
+    <string name="privacy">Privacy</string>
+    <string name="contact_tacing">Contact tracing</string>
+    <string name="safe_outs_1982">SAFE OUTS  POWERED BY 1982</string>
+    <string name="search_hint">Enter location/name</string>
 </resources>

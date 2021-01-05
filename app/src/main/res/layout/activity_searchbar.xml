@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.safeout.customer.searchbar">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:onClick="userdetailsactivitya"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/home_logo" />
+
+            <ImageView
+                android:id="@+id/loc_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/loc" />
+            <TextView
+                android:id="@+id/location_txt_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/loc_img"
+                android:layout_marginRight="20dp"
+                android:text="Location"
+                android:fontFamily="@font/maitree"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:id="@+id/horiz_line"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/checkbox_rect"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/horiz_line"
+        android:id="@+id/search_layoutAct"
+        android:layout_marginTop="5dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/searchbg2"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Search restaurants nearby"
+                android:id="@+id/search_edt_txt"
+                android:background="#fff"
+                android:fontFamily="@font/maitree"
+                android:textSize="14sp"
+                android:layout_centerVertical="true" />
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/search_img"
+                android:padding="5dp"
+                android:src="@drawable/ic_search_grey"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_img_bg"
+                android:scaleType="center" />
+        </RelativeLayout>
+    </RelativeLayout>
+<!--    <TextView-->
+<!--        android:id="@+id/dist_heading_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/search_layoutAct"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:text="Search by distance"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:fontFamily="@font/inter"/>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:id="@+id/distance_layout_search"-->
+<!--        android:layout_below="@id/dist_heading_search"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fht"-->
+<!--            android:layout_width="113dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:background="@drawable/text_box"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:textSize="12sp"-->
+<!--            android:text="Less than 500ms"-->
+<!--            android:textColor="#fff"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tkms"-->
+<!--            android:layout_width="113dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:background="@drawable/text_box"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_toRightOf="@id/fht"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:textSize="12sp"-->
+<!--            android:text="500ms to 2kms"-->
+<!--            android:textColor="#fff"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/Mtkms"-->
+<!--            android:layout_width="113dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:background="@drawable/text_box"-->
+<!--            android:layout_toRightOf="@id/tkms"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:textSize="12sp"-->
+<!--            android:text="More than 2kms"-->
+<!--            android:textColor="#fff"/>-->
+<!--    </RelativeLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/occupancy_heading_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/distance_layout_search"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:text="Search by Occupancy"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:fontFamily="@font/inter"/>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_below="@id/occupancy_heading_search"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:id="@+id/occupancy_layout"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/fp"-->
+<!--            android:layout_width="113dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:background="@drawable/text_box"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:textSize="10sp"-->
+<!--            android:text="Less than 4 people"-->
+<!--            android:textColor="#fff"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/ftp"-->
+<!--            android:layout_width="113dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:background="@drawable/text_box"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_toRightOf="@id/fp"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:textSize="10sp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:text=" 4 to 10 people"-->
+<!--            android:textColor="#fff"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/Mtp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_width="113dp"-->
+<!--            android:layout_height="33dp"-->
+<!--            android:background="@drawable/text_box"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_toRightOf="@id/ftp"-->
+<!--            android:gravity="center"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:textSize="10sp"-->
+<!--            android:text="More than 10people"-->
+<!--            android:textColor="#fff"/>-->
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/search_layoutAct"
+        android:id="@+id/layout2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check These Out "
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/inter"
+            android:textSize="20dp"
+            android:id="@+id/title"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/title"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/zomato_img"
+            android:scaleType="center"
+            android:src="@drawable/zomato_txt"
+            android:background="@drawable/zomato_bg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/zomato_img"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:onClick="mswiggyS"
+            android:id="@+id/swigy_img"
+            android:scaleType="center"
+            android:src="@drawable/path945"
+            android:background="@drawable/swigy_bg" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/layout2"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical"
+            android:id="@+id/search_rv"/>
+    </FrameLayout>
+</RelativeLayout>

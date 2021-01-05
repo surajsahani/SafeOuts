@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "200969716403",
+    "project_id": "safeouts-63f70",
+    "storage_bucket": "safeouts-63f70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200969716403:android:fa98fd3eae64d77e65e6c6",
+        "android_client_info": {
+          "package_name": "martialcoder.surajsahani.safeouts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200969716403-gcdhojj9s170417ha8in2tmpltlfqjpj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "martialcoder.surajsahani.safeouts",
+            "certificate_hash": "f28e30523b60ac25ac786c6e31adda7c32934c0a"
+          }
+        },
+        {
+          "client_id": "200969716403-dv6nbl1fgdcaffdhhod0hvkvfdc2hgc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnD6JGk7kgDxH-9f5xL5CkANAa_TPwj6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200969716403-dv6nbl1fgdcaffdhhod0hvkvfdc2hgc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

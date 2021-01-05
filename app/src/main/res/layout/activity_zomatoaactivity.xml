@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.safeout.customer.Zomatoaactivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorAccent" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_home"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/layout2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#fff"
+        android:layout_marginTop="50dp"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="safeOut has not yet partnered with this \nrestaurant"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/inter"
+            android:textSize="15dp"
+            android:id="@+id/title"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/title"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/zomato_imga"
+            android:scaleType="center"
+            android:src="@drawable/zomato_txt"
+            android:background="@drawable/zomato_bg"
+            android:onClick="zomato"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_toRightOf="@id/zomato_img"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:id="@+id/swigy_img"-->
+<!--            android:scaleType="center"-->
+<!--            android:src="@drawable/path945"-->
+<!--            android:background="@drawable/swigy_bg"-->
+<!--            android:onClick="swiggy"/>-->
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<martialcoder.surajsahani.safeouts.utils.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/myscroll"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantDetails">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:onClick="userdetailsactivity"
+                    android:src="@drawable/home_logo" />
+
+                <ImageView
+                    android:id="@+id/loc_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/loc" />
+                <TextView
+                    android:id="@+id/location_txt_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/loc_img"
+                    android:layout_marginRight="20dp"
+                    android:text="Location"
+                    android:fontFamily="@font/maitree"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#000"/>
+            </RelativeLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:id="@+id/horiz_line"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line"
+            android:id="@+id/detail_name_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:text="Restaurant Name"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_below="@id/horiz_line"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cardimg_detail"
+                android:src="@drawable/mc1"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_name_txt"
+            android:id="@+id/detail_address_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textColor="#736F6F"
+            android:textSize="16sp"
+            android:text="Restaurant Address"/>
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_address_txt"
+            android:id="@+id/detail_dist_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textColor="#736F6F"
+            android:textSize="16sp"
+            android:text=" 4 kms"/>
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_dist_txt"
+            android:id="@+id/detail_contact_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:textColor="#736F6F"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:text=" +918056130658 "/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="zomato"
+            android:layout_below="@id/detail_contact_txt"
+            android:id="@+id/detail_zomato_img"
+            android:scaleType="center"
+            android:src="@drawable/zomato_txt"
+            android:background="@drawable/zomato_bg"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/detail_zomato_img"
+            android:layout_below="@id/detail_contact_txt"
+            android:layout_marginLeft="20dp"
+            android:onClick="swiggy"
+            android:id="@+id/detail_swigy_img"
+            android:scaleType="center"
+            android:src="@drawable/path945"
+            android:background="@drawable/swigy_bg"/>
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_swigy_img"
+            android:id="@+id/detail_occupancy_heading_txt"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            android:text=" Real Time Occupancy "
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_occupancy_heading_txt"
+            android:id="@+id/detail_noOfpeople_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text=" No of people(live)       16"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@id/detail_noOfpeople_txt"
+            android:layout_below="@id/detail_occupancy_heading_txt"
+            android:src="@drawable/live"/>
+
+        <RelativeLayout
+            android:id="@+id/contact_layout"
+            android:layout_width="120dp"
+            android:layout_below="@id/detail_occupancy_heading_txt"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:elevation="20dp"
+            android:layout_height="120dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="27dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tracing_img" />
+
+            <TextView
+                android:layout_below="@id/tracing_img"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:textColor=" #159A8E
+"
+                android:gravity="center"
+                android:text="contact tracing \n available "/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_noOfpeople_txt"
+            android:id="@+id/detail_sop_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text="Capacity % after SOP  27%"/>
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_sop_txt"
+            android:id="@+id/detail_pre_covid_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text="Capacity % pre-covid  27%"/>
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_pre_covid_txt"
+            android:id="@+id/detail_safety_check_heading_txt"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            android:text=" Safety Check "
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_safety_check_heading_txt"
+            android:id="@+id/detail_emp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:text=" Employees"/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line1"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/detail_emp"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/emp_heading"
+            android:layout_below="@id/horiz_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/emp_name_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp"
+                android:textColor="#3E3D3D"
+                android:text=" Emp. Name"/>
+            <TextView
+                android:id="@+id/emp_design_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#3E3D3D"
+                android:text=" Post "/>
+
+            <TextView
+                android:id="@+id/emp_rating_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#3E3D3D"
+                android:text=" Body Temp "/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horiz_line_emp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/emp_heading"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/emp1"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/horiz_line_emp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/emp_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:textColor="#3E3D3D"
+                android:text=" Rahul SN"/>
+            <TextView
+                android:id="@+id/emp_post1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#3E3D3D"
+                android:text=" Cashier "/>
+
+            <TextView
+                android:id="@+id/emp_rating1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#3E3D3D"
+                android:text=" 97.9F "/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horiz_line2"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/emp1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/emp2"
+            android:layout_below="@id/horiz_line2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/emp_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:textColor="#3E3D3D"
+                android:text=" Rahul SN"/>
+            <TextView
+                android:id="@+id/emp_post2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#3E3D3D"
+                android:text=" Cashier "/>
+
+            <TextView
+                android:id="@+id/emp_rating2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#3E3D3D"
+                android:text=" 97.9F "/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horiz_line3"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/emp2"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/emp3"
+            android:layout_below="@id/horiz_line3"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/emp_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:textColor="#3E3D3D"
+                android:text=" Rahul SN"/>
+            <TextView
+                android:id="@+id/emp_post3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#3E3D3D"
+                android:text=" Cashier "/>
+
+            <TextView
+                android:id="@+id/emp_rating3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#3E3D3D"
+                android:text=" 97.9F "/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/more_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emp2"
+            android:layout_centerHorizontal="true"
+            android:text="More"
+            android:textSize="20sp"
+            android:fontFamily="@font/inter"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:id="@+id/view_shadow_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/more_btn"/>
+        <LinearLayout
+            android:id="@+id/horiz_line4"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/emp3"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/emp4"
+            android:layout_below="@id/horiz_line4"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/emp_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:textColor="#3E3D3D"
+                android:text=" Rahul SN"/>
+            <TextView
+                android:id="@+id/emp_post4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#3E3D3D"
+                android:text=" Cashier "/>
+
+            <TextView
+                android:id="@+id/emp_rating4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#3E3D3D"
+                android:text=" 97.9F "/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/horiz_line5"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/emp4"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/emp5"
+            android:layout_below="@id/horiz_line5"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/emp_name5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:textColor="#3E3D3D"
+                android:text=" Rahul SN"/>
+            <TextView
+                android:id="@+id/emp_post5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#3E3D3D"
+                android:text=" Cashier "/>
+
+            <TextView
+                android:id="@+id/emp_rating5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter"
+                android:layout_marginLeft="16dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#3E3D3D"
+                android:text=" 97.9F "/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/horiz_line6"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/emp5"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line6"
+            android:id="@+id/detail_other_checks_heading_txt"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            android:text=" Other Checks "
+            android:textColor="#000" />
+        <LinearLayout
+            android:id="@+id/horiz_line_oth"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/detail_other_checks_heading_txt"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line_oth"
+            android:id="@+id/detail_emp_wearing_heading_txt"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#736F6F"
+            android:text=" Employees wearing masks"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line_oth"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/detail_emp_wearing_mask_txt"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter"
+            android:textSize="16sp"
+            android:textColor="#736F6F"
+            android:text=" 24 employees"/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line7"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/detail_emp_wearing_heading_txt"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line7"
+            android:id="@+id/detail_sani_freq_heading_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#736F6F"
+            android:text=" Sanitization frequency"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line7"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/detail_emp_sani_freq_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:textSize="16sp"
+            android:textColor="#736F6F"
+            android:text=" 16"/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line8"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/detail_sani_freq_heading_txt"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line8"
+            android:id="@+id/detail_other_measures_heading_txt"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            android:text=" Other Measures "
+            android:textColor="#000" />
+
+        <LinearLayout
+            android:id="@+id/horiz_line9"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/detail_other_measures_heading_txt"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line9"
+            android:id="@+id/detail_contactless_ordering_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#736F6F"
+            android:text=" Contactless ordering "/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line10"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/detail_contactless_ordering_txt"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line10"
+            android:id="@+id/detail_tables_distance_txt"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:layout_marginLeft="16dp"
+            android:textSize="16sp"
+            android:textColor="#736F6F"
+            android:text=" 10m distance between tables"/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line11"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/detail_tables_distance_txt"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/checkbox_rect"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</martialcoder.surajsahani.safeouts.utils.CustomScrollView>

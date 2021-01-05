@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="414dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:background="#fff"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerInParent="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/home_logo" />
+
+                <ImageView
+                    android:id="@+id/loc_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/loc" />
+                <TextView
+                    android:id="@+id/location_txt_detail_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/loc_img"
+                    android:layout_marginRight="20dp"
+                    android:text="Location"
+                    android:fontFamily="@font/maitree"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#000"/>
+            </RelativeLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:id="@+id/curr_loc_img"
+            android:src="@drawable/ic_curr_vec"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/curr_loc_txt"
+            android:layout_below="@id/toolbar"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/curr_loc_img"
+            android:fontFamily="@font/inter"
+            android:text="Current location"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/horiz_line_oth"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/curr_loc_img"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chnge_loc_img"
+            android:layout_below="@id/horiz_line_oth"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/loc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/horiz_line_oth"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/change_loc_txt"
+            android:layout_toRightOf="@id/chnge_loc_img"
+            android:fontFamily="@font/inter"
+            android:text="   Change your location"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="5dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginRight="5dp"
+    app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/card_logo"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:id="@+id/card_logo_img"
+                    android:src="@drawable/mc1"
+                    android:scaleType="centerCrop"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="McDonald's "
+                android:layout_toRightOf="@id/card_logo"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/inter"
+                android:textSize="20sp"
+                android:id="@+id/card_title"
+                android:textColor="#000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 kms "
+                android:fontFamily="@font/inter"
+                android:layout_toRightOf="@id/card_logo"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/card_title"
+                android:textSize="16sp"
+                android:id="@+id/card_dist" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 people "
+                android:layout_below="@id/card_title"
+                android:drawableRight="@drawable/live"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/inter"
+                android:textSize="14sp"
+                android:id="@+id/card_people" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_below="@id/card_logo"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cardimg"
+                    android:src="@drawable/mc1"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

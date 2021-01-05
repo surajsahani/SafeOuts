@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ChangeLocation">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/home_logo" />
+
+            <ImageView
+                android:id="@+id/loc_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/loc" />
+            <TextView
+                android:id="@+id/location_txt_detail_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/loc_img"
+                android:layout_marginRight="20dp"
+                android:text="Location"
+                android:fontFamily="@font/maitree"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:textColor="#000"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/curr_loc_img"
+        android:src="@drawable/ic_curr_vec"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/curr_loc_txt_act"
+        android:layout_below="@id/toolbar"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/curr_loc_img"
+        android:fontFamily="@font/inter"
+        android:text="Current location"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/horiz_line_oth"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/curr_loc_img"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/checkbox_rect" />
+    </LinearLayout>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/horiz_line_oth"
+        android:id="@+id/change_loc_edt_txt_act"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="16dp"
+        android:padding="16dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableLeft="@drawable/loc"
+        android:hint=" Enter new location"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/change_loc_edt_txt_act"
+        android:src="@drawable/ic_search"
+        android:id="@+id/location_act_search_img"
+        android:layout_below="@id/horiz_line_oth"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/below_layout_act_location"
+        android:layout_below="@id/change_loc_edt_txt_act"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/horiz_line2"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line2"
+            android:id="@+id/hint1"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:text="Saket"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"/>
+        <LinearLayout
+            android:id="@+id/horiz_line3"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/hint1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line3"
+            android:id="@+id/hint2"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:text="Preet Vihar"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line4"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/hint2"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line4"
+            android:id="@+id/hint3"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:text="AIIMS"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/horiz_line5"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/hint3"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiz_line5"
+            android:id="@+id/hint4"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:text="Punjabi Bagh"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"/>
+        <LinearLayout
+            android:id="@+id/horiz_line6"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/hint4"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/checkbox_rect" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

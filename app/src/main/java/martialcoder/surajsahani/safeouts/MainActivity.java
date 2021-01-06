@@ -267,8 +267,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String address=products.getAddress();
                 lat2=products.getLatitude();
                 long2=products.getLongtitude();
-                double lat2set=Double.valueOf(lat2);
-                double longt2set=Double.valueOf(long2);
+//                double lat2set=Double.valueOf(lat2);
+//                double longt2set=Double.valueOf(long2);
                 Geocoder coder = new Geocoder(MainActivity.this);
                 try {
                     ArrayList<Address> adresses = (ArrayList<Address>) coder.getFromLocationName(location2.getText().toString(), 50);
@@ -281,8 +281,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     e.printStackTrace();
                 }
                 Location StartLoc=new Location("");
-                StartLoc.setLatitude(lat2set);
-                StartLoc.setLongitude(longt2set);
+////                StartLoc.setLatitude(lat2set);
+//                StartLoc.setLongitude(longt2set);
                 Location EndLoc=new Location("");
                 EndLoc.setLatitude(latitude);
                 EndLoc.setLongitude(longitude);

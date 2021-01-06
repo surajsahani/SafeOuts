@@ -397,8 +397,8 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
                 Picasso.get().load(products.getImage()).into(productViewHolder.ProductImage);
                 lat2=products.getLatitude();
                 longt2=products.getLongtitude();
-                double lat2set=Double.valueOf(lat2);
-                double longt2set=Double.valueOf(longt2);
+//                double lat2set=Double.valueOf(lat2);
+//                double longt2set=Double.valueOf(longt2);
                 Geocoder coder = new Geocoder(searchbar.this);
                 try {
                     ArrayList<Address> adresses = (ArrayList<Address>) coder.getFromLocationName(location23.getText().toString(), 50);
@@ -411,8 +411,8 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
                     e.printStackTrace();
                 }
                 Location StartLoc=new Location("");
-                StartLoc.setLatitude(lat2set);
-                StartLoc.setLongitude(longt2set);
+//                StartLoc.setLatitude(lat2set);
+//                StartLoc.setLongitude(longt2set);
                 Location EndLoc=new Location("");
                 EndLoc.setLatitude(latitude);
                 EndLoc.setLongitude(longitude);

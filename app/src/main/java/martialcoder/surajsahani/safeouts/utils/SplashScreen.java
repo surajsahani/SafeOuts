@@ -9,7 +9,7 @@ import martialcoder.surajsahani.safeouts.PhoneAuthActivity;
 import martialcoder.surajsahani.safeouts.R;
 
 
-public class SplashScreen<file> extends AppCompatActivity {
+public class SplashScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

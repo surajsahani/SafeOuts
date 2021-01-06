@@ -11,14 +11,14 @@
         android:layout_height="match_parent"
         android:id="@+id/rv_restaurants"
          />
-    <com.example.customerapp.zomatodata.GothamTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/tv_indicator"
-        android:gravity="center"
-        android:textSize="16sp"
-        android:text="Zomato data"
-        android:textStyle="bold|italic" />
+<!--    <com.example.customerapp.zomatodata.GothamTextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:id="@+id/tv_indicator"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="16sp"-->
+<!--        android:text="Zomato data"-->
+<!--        android:textStyle="bold|italic" />-->
 
 </RelativeLayout>

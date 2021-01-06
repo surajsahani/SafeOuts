@@ -3,6 +3,7 @@ package martialcoder.surajsahani.safeouts;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -56,6 +57,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import martialcoder.surajsahani.safeouts.zomatodata.Constants;
+import martialcoder.surajsahani.safeouts.zomatodata.EndlessRecyclerOnScrollListener;
 import martialcoder.surajsahani.safeouts.zomatodata.GothamTextView;
 import martialcoder.surajsahani.safeouts.zomatodata.RestaurantAdapter;
 import martialcoder.surajsahani.safeouts.zomatodata.RestaurantModel;
@@ -92,12 +94,12 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
         setContentView(R.layout.activity_searchbar);
         firebaseFirestore = FirebaseFirestore.getInstance();
         TutorRefs = firebaseFirestore.collection("Restaurants");
-//        fht=findViewById(R.id.fht);
-//        tkms=findViewById(R.id.tkms);
-//        Mtkms=findViewById(R.id.Mtkms);
-//        fp=findViewById(R.id.fp);
-//        ftp=findViewById(R.id.ftp);
-//        Mtp=findViewById(R.id.Mtp);
+        fht=findViewById(R.id.fht);
+        tkms=findViewById(R.id.tkms);
+        Mtkms=findViewById(R.id.Mtkms);
+        fp=findViewById(R.id.fp);
+        ftp=findViewById(R.id.ftp);
+        Mtp=findViewById(R.id.Mtp);
         dialogPay=new Dialog(searchbar.this);
         dialogPay.setContentView(R.layout.zomato_dialog);
         proceed=dialogPay.findViewById(R.id.zomato_know_more);
@@ -217,148 +219,148 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
         dialog.setCancelable(false);
         list=new ArrayList<>();
         Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
-//        fht.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                fht.setBackground(getResources().getDrawable(R.drawable.text_box2));
-//                clicked1=true;
-//                fhtsClick=true;
-//                tkmssClick=false;
-//                mtkmssClick=false;
-//                tkms.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                Mtkms.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                if (fpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").endAt("0.5_4");
-//                    filterData(query);
-//                }
-//                else if (ftpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0_4").endAt("0.5_10");
-//                    filterData(query);
-//                }
-//                else if (mtpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0_10.1").endAt("0.5_100");
-//                    filterData(query);
-//                }
-//                else
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance").endAt("0.5");
-//                    filterData(query);
-//                }
-//            }
-//        });
-//        tkms.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                tkms.setBackground(getResources().getDrawable(R.drawable.text_box2));
-//                tkmssClick=true;
-//                fhtsClick=false;
-//                mtkmssClick=false;
-//                Mtkms.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                fht.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                if (fpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0.5_0").endAt("2_4");
-//                    filterData(query);
-//                }
-//                else if (ftpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0.5_4").endAt("2_10");
-//                    filterData(query);
-//                }
-//                else if (mtpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0.5_10.1").endAt("2_100");
-//                    filterData(query);
-//                }
-//                else
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance").startAt("0.5").endAt("2");
-//                    filterData(query);
-//                }
-//            }
-//        });
-//        Mtkms.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Mtkms.setBackground(getResources().getDrawable(R.drawable.text_box2));
-//                mtkmssClick=true;
-//                fhtsClick=false;
-//                tkmssClick=false;
-//                tkms.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                fht.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                if (fpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("2.1_0").endAt("50_4");
-//                    filterData(query);
-//                }
-//                else if (ftpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("2.1_4").endAt("50_10");
-//                    filterData(query);
-//                }
-//                else if (mtpsClick)
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("2.1_10.1");
-//                    filterData(query);
-//                }
-//                else
-//                {
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance").startAt("2");
-//                    filterData(query);
-//                }
-//            }
-//        });
-//        fp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                fp.setBackground(getResources().getDrawable(R.drawable.text_box2));
-//                ftp.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                Mtp.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                fpsClick=true;
-//                ftpsClick=false;
-//                mtpsClick=false;
-//                Toast.makeText(searchbar.this, "Fp clicked", Toast.LENGTH_SHORT).show();
-//                    final Query query=TutorRefs.orderBy("nopive", Query.Direction.ASCENDING).limit(1);
-//                    query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                        @Override
-//                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                            filterData(query);
-//                        }
-//                    });
-//            }
-//        });
-//        ftp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ftp.setBackground(getResources().getDrawable(R.drawable.text_box2));
-//                fp.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                Mtp.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                fpsClick=false;
-//                ftpsClick=true;
-//                mtpsClick=false;
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("nopive").startAt("4").endAt("10");
-//                    filterData(query);
-//
-//            }
-//        });
-//        Mtp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                fp.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                ftp.setBackground(getResources().getDrawable(R.drawable.text_box));
-//                Mtp.setBackground(getResources().getDrawable(R.drawable.text_box2));
-//                fpsClick=false;
-//                ftpsClick=false;
-//                mtpsClick=true;
-//
-//                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("nopive").whereGreaterThanOrEqualTo("nopive",10);
-//                    filterData(query);
-//            }
-//        });
-//
+        fht.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fht.setBackground(getResources().getDrawable(R.drawable.text_box2));
+                clicked1=true;
+                fhtsClick=true;
+                tkmssClick=false;
+                mtkmssClick=false;
+                tkms.setBackground(getResources().getDrawable(R.drawable.text_box));
+                Mtkms.setBackground(getResources().getDrawable(R.drawable.text_box));
+                if (fpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").endAt("0.5_4");
+                    filterData(query);
+                }
+                else if (ftpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0_4").endAt("0.5_10");
+                    filterData(query);
+                }
+                else if (mtpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0_10.1").endAt("0.5_100");
+                    filterData(query);
+                }
+                else
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance").endAt("0.5");
+                    filterData(query);
+                }
+            }
+        });
+        tkms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tkms.setBackground(getResources().getDrawable(R.drawable.text_box2));
+                tkmssClick=true;
+                fhtsClick=false;
+                mtkmssClick=false;
+                Mtkms.setBackground(getResources().getDrawable(R.drawable.text_box));
+                fht.setBackground(getResources().getDrawable(R.drawable.text_box));
+                if (fpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0.5_0").endAt("2_4");
+                    filterData(query);
+                }
+                else if (ftpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0.5_4").endAt("2_10");
+                    filterData(query);
+                }
+                else if (mtpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("0.5_10.1").endAt("2_100");
+                    filterData(query);
+                }
+                else
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance").startAt("0.5").endAt("2");
+                    filterData(query);
+                }
+            }
+        });
+        Mtkms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Mtkms.setBackground(getResources().getDrawable(R.drawable.text_box2));
+                mtkmssClick=true;
+                fhtsClick=false;
+                tkmssClick=false;
+                tkms.setBackground(getResources().getDrawable(R.drawable.text_box));
+                fht.setBackground(getResources().getDrawable(R.drawable.text_box));
+                if (fpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("2.1_0").endAt("50_4");
+                    filterData(query);
+                }
+                else if (ftpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("2.1_4").endAt("50_10");
+                    filterData(query);
+                }
+                else if (mtpsClick)
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance_nopive").startAt("2.1_10.1");
+                    filterData(query);
+                }
+                else
+                {
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("distance").startAt("2");
+                    filterData(query);
+                }
+            }
+        });
+        fp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fp.setBackground(getResources().getDrawable(R.drawable.text_box2));
+                ftp.setBackground(getResources().getDrawable(R.drawable.text_box));
+                Mtp.setBackground(getResources().getDrawable(R.drawable.text_box));
+                fpsClick=true;
+                ftpsClick=false;
+                mtpsClick=false;
+                Toast.makeText(searchbar.this, "Fp clicked", Toast.LENGTH_SHORT).show();
+                    final Query query=TutorRefs.orderBy("nopive", Query.Direction.ASCENDING).limit(1);
+                    query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            filterData(query);
+                        }
+                    });
+            }
+        });
+        ftp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ftp.setBackground(getResources().getDrawable(R.drawable.text_box2));
+                fp.setBackground(getResources().getDrawable(R.drawable.text_box));
+                Mtp.setBackground(getResources().getDrawable(R.drawable.text_box));
+                fpsClick=false;
+                ftpsClick=true;
+                mtpsClick=false;
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("nopive").startAt("4").endAt("10");
+                    filterData(query);
+
+            }
+        });
+        Mtp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fp.setBackground(getResources().getDrawable(R.drawable.text_box));
+                ftp.setBackground(getResources().getDrawable(R.drawable.text_box));
+                Mtp.setBackground(getResources().getDrawable(R.drawable.text_box2));
+                fpsClick=false;
+                ftpsClick=false;
+                mtpsClick=true;
+
+                    final com.google.firebase.firestore.Query query=TutorRefs.orderBy("nopive").whereGreaterThanOrEqualTo("nopive",10);
+                    filterData(query);
+            }
+        });
+
 
 
 //        rv=(RecyclerView) findViewById(R.id.rv_restaurants);
@@ -379,7 +381,7 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
 //            }
 //        });
 //        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-//        toolbar.setTitleTextColor(Color.parseColor("#dcd9cd"));
+        toolbar.setTitleTextColor(Color.parseColor("#dcd9cd"));
     }
 
     @Override
@@ -702,8 +704,8 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
                 productViewHolder.txtProductPrice.setText(products.getNopive()+" peoples");
                 lat2=products.getLatitude();
                 longt2=products.getLongtitude();
-                double lat2set=Double.valueOf(lat2);
-                double longt2set=Double.valueOf(longt2);
+//                double lat2set=Double.valueOf(lat2);
+//                double longt2set=Double.valueOf(longt2);
                 Geocoder coder = new Geocoder(searchbar.this);
                 try {
                     ArrayList<Address> adresses = (ArrayList<Address>) coder.getFromLocationName(location23.getText().toString(), 50);
@@ -716,8 +718,8 @@ public class searchbar extends AppCompatActivity implements SearchView.OnQueryTe
                     e.printStackTrace();
                 }
                 Location StartLoc=new Location("");
-                StartLoc.setLatitude(lat2set);
-                StartLoc.setLongitude(longt2set);
+//                StartLoc.setLatitude(lat2set);
+//                StartLoc.setLongitude(longt2set);
                 Location EndLoc=new Location("");
                 EndLoc.setLatitude(latitude);
                 EndLoc.setLongitude(longitude);

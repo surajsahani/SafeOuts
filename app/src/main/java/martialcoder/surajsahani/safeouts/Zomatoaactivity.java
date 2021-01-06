@@ -68,7 +68,7 @@ public class Zomatoaactivity extends AppCompatActivity implements SearchView.OnQ
         imagezomato=(ImageView)findViewById(R.id.zomato_imga);
         layoutrestaurant=(LinearLayout)findViewById(R.id.tv_item_rating);
         setContentView(R.layout.activity_zomatoaactivity);
-        tvIndicator=(GothamTextView)findViewById(R.id.tv_indicator);
+//        tvIndicator=(GothamTextView)findViewById(R.id.tv_indicator);
         tvRating=(GothamTextView)findViewById(R.id.tv_item_rating) ;
         dialog=new ProgressDialog(Zomatoaactivity.this);
         dialog.setTitle("Loading");

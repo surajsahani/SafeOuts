@@ -169,4 +169,8 @@ public class UserDetails extends AppCompatActivity {
         startActivity(new Intent(this, Notification.class));
         finish();
     }
+    public void upload(View view) {
+        Intent intent = new Intent(UserDetails.this,UploadtActivity.class);
+        startActivity(intent);
+    }
 }
